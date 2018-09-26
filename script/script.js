@@ -13,9 +13,9 @@ function upTime(countTo) {
   mins=Math.floor(((difference%(60*60*1000*24))%(60*60*1000))/(60*1000)*1);
   secs=Math.floor((((difference%(60*60*1000*24))%(60*60*1000))%(60*1000))/1000*1);
   secc=Math.floor(difference/(1000));
-
-
-  document.getElementById('secc').firstChild.nodeValue = secc;
+  aeon = secc * 3.17097919838  *Math.pow(10, -17);
+  console.log(aeon);
+  document.getElementById('secc').firstChild.nodeValue = aeon;
 
 
   clearTimeout(upTime.to);
